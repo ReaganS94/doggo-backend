@@ -5,7 +5,7 @@ const getDogs = async (req, res) => {
       const dogs = await Dog.find();
       res.json({
         success: true,
-        data: user,
+        data: dogs,
         msg: "show all the dogs",
       });
     } catch (err) {
@@ -17,7 +17,7 @@ const getDog = async (req, res, next) => {
     try {
     const dog = await Dog.findById(id);
     res.json({
-        data: dog
+        data: dogs
     })
     } catch (err) {
         console.error(err);

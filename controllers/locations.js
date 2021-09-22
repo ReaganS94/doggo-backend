@@ -4,6 +4,7 @@ const getLocations = async (req, res) => {
   try {
     const locations = await Location.find();
     res.json({
+      success: true,
       data: locations,
       msg: "show all locations",
     });

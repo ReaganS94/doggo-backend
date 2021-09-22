@@ -40,36 +40,36 @@ const DogSchema = new Schema({
 
   parent: {
     type: Schema.ObjectId,
-    ref: "User",
+    ref: "Users",
   },
 
   kidFriendly: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "KidFriendly",
   },
 
   catFriendly: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "CatFriendly",
   },
 
   allergies: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "Allergies",
   },
 
   castrated: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "Castrated",
   },
 
   character: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "Character",
   },
 
   command: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "Command",
   },
 });

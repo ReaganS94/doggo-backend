@@ -1,11 +1,9 @@
-const express = require('express')
+const express = require("express");
 
 const { getCastrated } = require("../controllers/castrated");
 
-const api = express.Router()
+const api = express.Router();
 
-api.route('/').get(getCastrated);
-
-// api.route('/:id').get(getUser);
+api.route("/").get(getCastrated);
 
 module.exports = api;
