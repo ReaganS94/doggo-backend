@@ -14,6 +14,7 @@ const getCharacters = async (req, res) => {
 
 const getCharacter = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const character = await Characters.findById(id);
     res.json({
       success: true,

@@ -14,6 +14,7 @@ const getTags = async (req, res) => {
 
 const getTag = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const tag = await Tags.findById(id);
     res.json({
       success: true,

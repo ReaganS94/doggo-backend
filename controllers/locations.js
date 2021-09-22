@@ -15,6 +15,7 @@ const getLocations = async (req, res) => {
 
 const getLocation = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const location = await Location.findById(id);
     res.json({
       data: location,

@@ -9,4 +9,8 @@ const KidFriendlySchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("KidFriendly", KidFriendlySchema);
+module.exports = mongoose.model(
+  "KidFriendly",
+  KidFriendlySchema,
+  "kidfriendly"
+);

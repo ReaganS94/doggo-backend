@@ -14,6 +14,7 @@ const getAllergies = async (req, res) => {
 
 const getAllergy = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const allergy = await Allergy.findById(id);
     res.json({
       success: true,

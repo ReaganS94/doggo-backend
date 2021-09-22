@@ -9,4 +9,8 @@ const CatFriendlySchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("CatFriendly", CatFriendlySchema);
+module.exports = mongoose.model(
+  "CatFriendly",
+  CatFriendlySchema,
+  "catfriendly"
+);

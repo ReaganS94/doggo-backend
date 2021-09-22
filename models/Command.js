@@ -10,4 +10,4 @@ const CommandSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Command", CommandSchema);
+module.exports = mongoose.model("Command", CommandSchema, "commands");

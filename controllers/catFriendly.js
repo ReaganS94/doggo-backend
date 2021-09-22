@@ -1,19 +1,18 @@
-const User = require('../models/CatFriendly')
+const CatFriendly = require("../models/CatFriendly");
 
 const getCatFriendly = async (req, res) => {
-    try {
-      const users = await CatFriendly.find();
-      res.json({
-        success: true,
-        data: user,
-        msg: "show cat friendly or not",
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+  try {
+    const catFriendly = await CatFriendly.find();
+    res.json({
+      success: true,
+      data: catFriendly,
+      msg: "show cat friendly or not",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 module.exports = {
-    getCatFriendly
-}
+  getCatFriendly,
+};

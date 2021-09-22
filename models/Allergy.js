@@ -10,4 +10,4 @@ const AllergySchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Allergy", AllergySchema);
+module.exports = mongoose.model("Allergy", AllergySchema, "allergies"); //3rd parameter is the name of the collection

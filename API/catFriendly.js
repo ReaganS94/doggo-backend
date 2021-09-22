@@ -1,10 +1,9 @@
-const express = require('express')
+const express = require("express");
 
 const { getCatFriendly } = require("../controllers/catFriendly");
 
-const api = express.Router()
+const api = express.Router();
 
-api.route('/').get(getCatFriendly);
-
+api.route("/").get(getCatFriendly);
 
 module.exports = api;
