@@ -1,14 +1,12 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
 const KidFriendlySchema = new Schema({
-    validation: {
-       type: Boolean, 
-       required: [true, 'Please select y/n']
-    }
+  validation: {
+    type: Boolean,
+    required: [true, "Please select y/n"],
+  },
 });
 
-
-
-module.exports = mongoose.model('KidFriendly', KidFriendlySchema);
+module.exports = mongoose.model("KidFriendly", KidFriendlySchema);
