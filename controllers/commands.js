@@ -5,7 +5,7 @@ const getCommands = async (req, res) => {
     const commands = await Command.find();
     res.json({
       success: true,
-      data: command,
+      data: commands,
       msg: "show all commands",
     });
   } catch (err) {
@@ -15,6 +15,7 @@ const getCommands = async (req, res) => {
 
 const getCommand = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const command = await Command.findById(id);
     res.json({
       data: command,

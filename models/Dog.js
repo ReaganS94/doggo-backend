@@ -38,40 +38,44 @@ const DogSchema = new Schema({
     maxlength: [200, "max 200 chars are allowed for the profilePic"],
   },
 
+  castrated: {
+    type: Boolean,
+    required: [true, "Please add Information"],
+  },
+
   parent: {
     type: Schema.ObjectId,
     ref: "User",
   },
 
   kidFriendly: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "KidFriendly",
   },
 
   catFriendly: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "CatFriendly",
   },
 
   allergies: {
-    type: Scheme.ObjectId,
+    type: Schema.ObjectId,
     ref: "Allergies",
   },
 
-  castrated: {
-    type: Scheme.ObjectId,
-    ref: "Castrated",
-  },
+  character: [
+    {
+      type: Schema.ObjectId,
+      ref: "Character",
+    },
+  ],
 
-  character: {
-    type: Scheme.ObjectId,
-    ref: "Character",
-  },
-
-  command: {
-    type: Scheme.ObjectId,
-    ref: "Command",
-  },
+  commands: [
+    {
+      type: Schema.ObjectId,
+      ref: "Command",
+    },
+  ],
 });
 
-module.exports = mongoose.model("Dog", DogSchema);
+module.exports = mongoose.model("Dog", DogSchema, "dogs");

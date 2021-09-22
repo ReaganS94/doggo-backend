@@ -9,4 +9,4 @@ const CastratedSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("CastratedFriendly", CastratedSchema);
+module.exports = mongoose.model("Castrated", CastratedSchema, "castrated");

@@ -5,7 +5,7 @@ const getLocations = async (req, res) => {
     const locations = await Location.find();
     res.json({
       success: true,
-      data: location,
+      data: locations,
       msg: "show all locations",
     });
   } catch (err) {
@@ -15,6 +15,7 @@ const getLocations = async (req, res) => {
 
 const getLocation = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const location = await Location.findById(id);
     res.json({
       data: location,

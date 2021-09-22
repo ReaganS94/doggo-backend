@@ -10,4 +10,8 @@ const LocationTypeSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("LocationType", LocationTypeSchema);
+module.exports = mongoose.model(
+  "LocationType",
+  LocationTypeSchema,
+  "locationtype"
+);
