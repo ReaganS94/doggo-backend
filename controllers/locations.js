@@ -25,6 +25,6 @@ const getLocation = async (req, res, next) => {
 };
 
 module.exports = {
-  getCommands,
-  getCommand,
+  getLocations,
+  getLocation,
 };
