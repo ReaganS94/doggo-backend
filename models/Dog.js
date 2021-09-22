@@ -49,18 +49,18 @@ const DogSchema = new Schema({
   },
 
   kidFriendly: {
-    type: Schema.ObjectId,
-    ref: "KidFriendly",
+    type: Boolean,
+    required: [true, "Please state if your dog is kid friendly"],
   },
 
   catFriendly: {
-    type: Schema.ObjectId,
-    ref: "CatFriendly",
+    type: Boolean,
+    required: [true, "Please state if your dog is cat friendly"],
   },
 
   allergies: {
-    type: Schema.ObjectId,
-    ref: "Allergies",
+    type: Boolean,
+    required: [true, "Please state if your dog has allergies"],
   },
 
   character: [
