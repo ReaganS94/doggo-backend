@@ -4,8 +4,7 @@ const getLocations = async (req, res) => {
   try {
     const locations = await Location.find();
     res.json({
-      success: true,
-      data: location,
+      data: locations,
       msg: "show all locations",
     });
   } catch (err) {
@@ -25,6 +24,6 @@ const getLocation = async (req, res, next) => {
 };
 
 module.exports = {
-  getCommands,
-  getCommand,
+  getLocations,
+  getLocation,
 };
