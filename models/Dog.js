@@ -45,7 +45,7 @@ const DogSchema = new Schema({
 
   parent: {
     type: Schema.ObjectId,
-    ref: "User",
+    ref: "Users",
   },
 
   kidFriendly: {
