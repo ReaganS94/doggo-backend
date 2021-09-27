@@ -76,6 +76,13 @@ const DogSchema = new Schema({
       ref: "Command",
     },
   ],
+
+  galleryPhotos: [
+    {
+      type: Array,
+      maxlength: [1000, "max 1000 chars are allowed for the about section"],
+    },
+  ],
 });
 
 module.exports = mongoose.model("Dog", DogSchema, "dogs");
