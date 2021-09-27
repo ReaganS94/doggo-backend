@@ -18,12 +18,15 @@ const getDogs = async (req, res) => {
 const getDog = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const dog = await Dog.findById(id);
+    const dog = await Dog.findById(id)
+      .populate("character")
+      .populate("commands")
+      .populate("parent");
     res.json({
       data: dog,
     });
   } catch (err) {
-    console.error(err);
+    next(err);
   }
 };
 
