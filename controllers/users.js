@@ -2,7 +2,7 @@ const User = require("../models/User");
 
 const getUsers = async (req, res, next) => {
   try {
-    const users = await User.find();
+    const users = await User.find(req.query).populate("tags dog");
     res.json({
       data: users,
       msg: "show all users",

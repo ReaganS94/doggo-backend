@@ -60,13 +60,13 @@ const UserSchema = new Schema({
   tags: [
     {
       type: Schema.ObjectId,
-      ref: "tags",
+      ref: "Tag",
     },
   ],
 
   dog: {
     type: Schema.ObjectId,
-    ref: "dog",
+    ref: "Dog",
   },
 });
 
