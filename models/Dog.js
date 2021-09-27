@@ -43,7 +43,7 @@ const DogSchema = new Schema({
     required: [true, "Please add Information"],
   },
 
-  parent: {
+  user: {
     type: Schema.ObjectId,
     ref: "User",
   },
