@@ -45,7 +45,7 @@ const DogSchema = new Schema({
 
   parent: {
     type: Schema.ObjectId,
-    ref: "Users",
+    ref: "User",
   },
 
   kidFriendly: {
@@ -74,6 +74,13 @@ const DogSchema = new Schema({
     {
       type: Schema.ObjectId,
       ref: "Command",
+    },
+  ],
+
+  galleryPhotos: [
+    {
+      type: Array,
+      maxlength: [1000, "max 1000 chars are allowed for the about section"],
     },
   ],
 });
