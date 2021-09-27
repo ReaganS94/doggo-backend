@@ -64,10 +64,12 @@ const UserSchema = new Schema({
     },
   ],
 
-  dog: {
-    type: Schema.ObjectId,
-    ref: "Dog",
-  },
+  dog: [
+    {
+      type: Schema.ObjectId,
+      ref: "Dog",
+    },
+  ],
 });
 
 UserSchema.pre("save", function (next) {

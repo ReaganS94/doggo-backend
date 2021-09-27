@@ -2,7 +2,7 @@ const Location = require("../models/Location");
 
 const getLocations = async (req, res) => {
   try {
-    const locations = await Location.find();
+    const locations = await Location.find().populate("type");
     res.json({
       success: true,
       data: locations,
@@ -16,7 +16,7 @@ const getLocations = async (req, res) => {
 const getLocation = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const location = await Location.findById(id);
+    const location = await Location.findById(id).populate("type");
     res.json({
       data: location,
     });
