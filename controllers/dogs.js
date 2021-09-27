@@ -2,7 +2,9 @@ const Dog = require("../models/Dog");
 
 const getDogs = async (req, res) => {
   try {
-    const dogs = await Dog.find();
+    const dogs = await Dog.find(req.query).populate(
+      "character commands parent"
+    );
     res.json({
       success: true,
       data: dogs,
