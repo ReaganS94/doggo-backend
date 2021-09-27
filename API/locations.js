@@ -1,10 +1,14 @@
 const express = require("express");
 
-const { getLocations, getLocation } = require("../controllers/locations");
+const {
+  getLocations,
+  getLocation,
+  createLocation,
+} = require("../controllers/locations");
 
 const api = express.Router();
 
-api.route("/").get(getLocations);
+api.route("/").get(getLocations).post(createLocation);
 
 api.route("/:id").get(getLocation);
 
