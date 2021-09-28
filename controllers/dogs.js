@@ -28,7 +28,53 @@ const getDog = async (req, res, next) => {
   }
 };
 
+const createDog = async (req, res) => {
+  try {
+    const {
+      name,
+      breed,
+      size,
+      age,
+      about,
+      profilePic,
+      kidFriendly,
+      catFriendly,
+      allergies,
+      castrated,
+      character,
+      commands,
+      galleryPhotos,
+    } = req.body;
+    const location = await Location.create({
+      name,
+      breed,
+      size,
+      age,
+      about,
+      profilePic,
+      kidFriendly,
+      catFriendly,
+      allergies,
+      castrated,
+      character,
+      commands,
+      galleryPhotos,
+    });
+
+    ///curl -d '{"name": "puppy", "breed": "test", "size": 4‚ "age": 5, "about": "test", "profilePic": "test", "castrated": true, "kidfriendly": true, "allergies": false}' -H "Content-Type: application/json" -X POST http://localhost:5000/dogs
+
+    res.json({
+      msg: `added location ${id}`,
+      success: true,
+      data: location,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   getDogs,
   getDog,
+  createDog,
 };

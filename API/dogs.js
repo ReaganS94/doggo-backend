@@ -1,10 +1,10 @@
 const express = require("express");
 
-const { getDogs, getDog } = require("../controllers/dogs");
+const { getDogs, getDog, createDog } = require("../controllers/dogs");
 
 const api = express.Router();
 
-api.route("/").get(getDogs);
+api.route("/").get(getDogs).post(createDog);
 
 api.route("/:id").get(getDog);
 
