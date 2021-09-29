@@ -37,9 +37,8 @@ const createLocation = async (req, res) => {
       long,
       type,
     });
-
+    console.log(location);
     res.json({
-      msg: `added location ${id}`,
       success: true,
       data: location,
     });
