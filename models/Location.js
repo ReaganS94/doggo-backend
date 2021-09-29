@@ -28,12 +28,12 @@ const LocationSchema = new Schema({
 
   LatLng: {
     lat: {
-      type: Decimal128,
+      type: Number,
       required: [true, "Please add latitude"],
     },
 
     lng: {
-      type: Decimal128,
+      type: Number,
       required: [true, "Please add longitude"],
     },
   },
