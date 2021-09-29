@@ -45,7 +45,7 @@ const createDog = async (req, res) => {
       commands,
       galleryPhotos,
     } = req.body;
-    const location = await Location.create({
+    const dog = await Dog.create({
       name,
       breed,
       size,
@@ -66,7 +66,7 @@ const createDog = async (req, res) => {
     res.json({
       msg: `added location`,
       success: true,
-      data: location,
+      data: dog,
     });
   } catch (err) {
     console.log(err);
