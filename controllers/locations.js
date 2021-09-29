@@ -27,23 +27,25 @@ const getLocation = async (req, res, next) => {
 
 const createLocation = async (req, res) => {
   try {
-    const { name, address, website, phone, lat, long, type } = req.body;
+    const { name, address, website, phone, LatLng, type } = req.body;
     const location = await Location.create({
       name,
       address,
       website,
       phone,
-      lat,
-      long,
+      LatLng,
       type,
     });
-    console.log(location);
     res.json({
       success: true,
       data: location,
     });
   } catch (err) {
     console.log(err);
+    res.json({
+      success: false,
+      data: err,
+    });
   }
 };
 

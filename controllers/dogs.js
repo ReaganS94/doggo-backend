@@ -61,15 +61,16 @@ const createDog = async (req, res) => {
       galleryPhotos,
     });
 
-    ///curl -d '{"name": "puppy", "breed": "test", "size": 4‚ "age": 5, "about": "test", "profilePic": "test", "castrated": true, "kidfriendly": true, "allergies": false}' -H "Content-Type: application/json" -X POST http://localhost:5000/dogs
-
     res.json({
-      msg: `added dog`,
       success: true,
       data: dog,
     });
   } catch (err) {
     console.log(err);
+    res.json({
+      success: false,
+      data: err,
+    });
   }
 };
 

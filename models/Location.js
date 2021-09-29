@@ -26,14 +26,16 @@ const LocationSchema = new Schema({
     maxlength: [20, "max 20 chars are allowed for phone"],
   },
 
-  lat: {
-    type: Decimal128,
-    required: [true, "Please add lat"],
-  },
+  LatLng: {
+    lat: {
+      type: Decimal128,
+      required: [true, "Please add latitude"],
+    },
 
-  long: {
-    type: Decimal128,
-    required: [true, "Please add long"],
+    lng: {
+      type: Decimal128,
+      required: [true, "Please add longitude"],
+    },
   },
 
   type: {
