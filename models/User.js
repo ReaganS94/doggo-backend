@@ -32,7 +32,7 @@ const UserSchema = new Schema({
   phoneNumber: {
     type: String,
     required: [true, "Please add a phoneNumber"],
-    match: [/^\(\d{3}\)\s\d{3}\s-\s\d{4}/g, "Telephone number is invalid"],
+    match: [/^\d+$/, "Telephone number is invalid"],
   },
 
   profilePic: {
@@ -93,6 +93,6 @@ UserSchema.pre("save", function (next) {
   } else {
     return next();
   }
-});
+}); 
 
 module.exports = mongoose.model("User", UserSchema, "users");
