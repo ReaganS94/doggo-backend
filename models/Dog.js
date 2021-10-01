@@ -34,7 +34,6 @@ const DogSchema = new Schema({
 
   profilePic: {
     type: String,
-    required: [true, "Please add a profilePic"],
     maxlength: [200, "max 200 chars are allowed for the profilePic"],
   },
 

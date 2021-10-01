@@ -37,7 +37,6 @@ const UserSchema = new Schema({
 
   profilePic: {
     type: String,
-    required: [true, "Please add a profile picture"],
     maxlength: [2000, "max 2000 chars are allowed for the profilePic"],
   },
 
@@ -48,7 +47,6 @@ const UserSchema = new Schema({
 
   availability: {
     type: Boolean,
-    required: [true, "Please add your preference"],
   },
 
   city: {
@@ -93,6 +91,6 @@ UserSchema.pre("save", function (next) {
   } else {
     return next();
   }
-}); 
+});
 
 module.exports = mongoose.model("User", UserSchema, "users");
