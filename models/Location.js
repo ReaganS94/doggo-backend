@@ -1,4 +1,4 @@
-const { Decimal128 } = require("mongoose");
+// const { Decimal128 } = require("mongoose");
 const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
@@ -22,8 +22,8 @@ const LocationSchema = new Schema({
   },
 
   phone: {
-    type: Number,
-    maxlength: [20, "max 20 chars are allowed for phone"],
+    type: String,
+    maxlength: [25, "max 25 chars are allowed for phone"],
   },
 
   LatLng: {
