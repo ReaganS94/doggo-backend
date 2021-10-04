@@ -37,7 +37,10 @@ const UserSchema = new Schema({
 
   profilePic: {
     type: String,
+<<<<<<< HEAD
     //required: [true, "Please add a profile picture"],
+=======
+>>>>>>> 0eb1d6516c908dfccdca75dffc3f6184b03b8ca2
     maxlength: [2000, "max 2000 chars are allowed for the profilePic"],
   },
 
@@ -48,7 +51,10 @@ const UserSchema = new Schema({
 
   availability: {
     type: Boolean,
+<<<<<<< HEAD
     //required: [true, "Please add your preference"],
+=======
+>>>>>>> 0eb1d6516c908dfccdca75dffc3f6184b03b8ca2
   },
 
   city: {
@@ -95,7 +101,7 @@ UserSchema.pre("save", function (next) {
   } else {
     return next();
   }
-}); 
+});
 
 
 
