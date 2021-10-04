@@ -68,6 +68,15 @@ const UserSchema = new Schema({
       ref: "Dog",
     },
   ],
+  LatLng: {
+    lat: {
+      type: Number,
+    },
+
+    lng: {
+      type: Number,
+    },
+  },
 });
 
 UserSchema.pre("save", function (next) {
